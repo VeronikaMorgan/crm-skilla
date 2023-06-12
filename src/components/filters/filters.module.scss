@@ -1,0 +1,41 @@
+.filters {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 32px;
+  position: relative;
+  top: 40px;
+
+  &__btn {
+    color: var(--text-secondary-color);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    transition: color .1s ease-in-out;
+    // to make hover work
+    padding-bottom: 40px;
+    & svg {
+      width: 8.75px;
+      height: auto;
+    }
+
+    &:hover {
+      color: var(--color-btn-hovered);
+
+      & svg path {
+        fill: var(--color-btn-hovered);
+      }
+    }
+  }
+  &__employee {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    & img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+}

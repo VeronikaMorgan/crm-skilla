@@ -1,0 +1,14 @@
+.app {
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  font-family: 'SFProDisplay';
+  font-size: 16px;
+  grid-template-areas:
+  'navBar head'
+  'navBar main'
+  ;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 64px 1fr;
+}

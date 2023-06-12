@@ -1,0 +1,142 @@
+.profile {
+  position: relative;
+  top: 20px;
+  font-size: 14px;
+  // to make hover work
+  padding-bottom: 40px;
+
+  &__icon {
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &:hover {
+    & .profile__content {
+      display: block;
+    }
+
+    & .profile__icon {
+      & svg path {
+        fill: var(--color-btn-hovered);
+      }
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+    position: absolute;
+    background-color: #fff;
+    padding: 20px 0 32px 0;
+    z-index: 3;
+    top: 58px;
+    right: 0;
+    display: none;
+    width: 368px;
+    border-radius: 4px;
+    box-shadow: -1px 9px 20px -3px rgba(173, 191, 223, 0.2);
+    font-family: 'SFProDisplay';
+  }
+
+  &__user_info {
+    display: grid;
+    grid-template-columns: auto 24px;
+    grid-template-rows: auto;
+    margin-bottom: 20px;
+    row-gap: 6px;
+    padding: 0 32px;
+  }
+
+  &__user_name {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-default-color);
+  }
+
+  &__user_contacts {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px var(--color-input) solid;
+  }
+
+  &__user_contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & svg {
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  &__employees {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media screen and (max-width: 1600px) {
+      max-height: 400px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 0px;
+        display: none;
+        // margin-left: 8px;
+      }
+
+      // &::-webkit-scrollbar-track {
+      //   margin-top: 24px;
+      //   background-color: var(--color-input);
+      // }
+      // &::-webkit-scrollbar-thumb {
+      //   background-color: #e3e3e3;
+      //   border: none;
+      //   border-radius: 20px;
+      // }
+    }
+  }
+
+  &__employees_title {
+    margin-bottom: 16px;
+    margin-left: 32px;
+  }
+
+  &__employees_list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__employee {
+    cursor: pointer;
+    color: var(--color-light-blue);
+    min-height: 48px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 32px 1fr 20px;
+    align-items: center;
+    padding: 0 32px;
+
+    &:hover {
+      color: var(--color-blue);
+      background-color: #002efb21;
+
+      & svg path {
+        fill: var(--color-blue)
+      }
+    }
+
+    & img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+}

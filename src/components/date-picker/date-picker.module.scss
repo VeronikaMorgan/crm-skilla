@@ -1,0 +1,66 @@
+.picker {
+  max-width: fit-content;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  top: 10px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+  &__value {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--color-light-blue);
+    cursor: pointer;
+
+    &:hover path {
+      fill: var(--color-blue);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    display: none;
+    z-index: 4;
+    right: 0;
+    top: 55px;
+    width: 204px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 0 26px 0 #e9edf3cc;
+  }
+
+  &__option {
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #899CB1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--text-default-color);
+      background-color: #002efb21;
+    }
+  }
+
+  &__calendar {
+    padding: 12px 20px 20px 20px;
+    height: auto;
+    &:hover {
+      background-color: #002efb21;
+    }
+  }
+
+  &:hover {
+    .picker__content {
+      display: block;
+    }
+    & .picker__value path {
+      fill: var(--color-blue);
+    }
+  }
+}

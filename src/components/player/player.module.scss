@@ -1,0 +1,51 @@
+.player {
+  box-sizing: border-box;
+  min-width: 352px;
+  height: 48px;
+  border-radius: 48px;
+  background-color: var(--color-input);
+  padding: 0 20px;
+  color: var(--text-default-color);
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 12px;
+
+  &__play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  &__progress {
+    cursor: pointer;
+    width: 164px;
+    height: 4px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #fff 0, var(--color-blue) 0);
+    appearance: none;
+    transition: background .1s linear;
+
+    &::-webkit-slider-thumb {
+      display: none;
+      appearance: none;
+    }
+
+    &::-moz-range-thumb {
+      display: none;
+      appearance: none;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+  }
+}

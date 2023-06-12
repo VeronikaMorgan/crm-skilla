@@ -1,0 +1,101 @@
+.aside {
+  background-color: var(--bg-color-aside);
+  padding-top: 20px;
+  grid-area: navBar;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding-left: 12px;
+  align-items: center;
+  margin-bottom: 32px;
+  @media screen and (max-width:1600px){
+    margin-bottom: 8px;
+  }
+}
+
+.nav {
+  margin-bottom: 64px;
+  @media screen and (max-width:1600px){
+    margin-bottom: 8px;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 14px 12px;
+    gap: 12px;
+    border-left: 3px transparent solid;
+    color: var(--color-inactive);
+    min-height: 52px;
+    & svg {
+      width: 24px;
+
+      & path {
+        fill: var(--color-inactive);
+      }
+    }
+
+    &_active {
+      background-color: var(--color-link-active);
+      border-left: 3px var(--color-blue) solid;
+      color: white;
+      position: relative;
+
+      & svg path {
+        fill: white;
+      }
+
+      &::after {
+        content: '';
+        height: 8px;
+        width: 8px;
+        position: absolute;
+        right: 12px;
+        border-radius: 50%;
+        background-color: var(--color-yellow);
+        box-shadow: 0 3px 8px 0 #EDDA0180;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-items: center;
+  align-self: center;
+  @media screen and (max-width:1600px){
+    gap: 20px;
+  }
+}
+
+.button {
+  font-size: inherit;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 25px;
+  justify-items: center;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  width: 200px;
+  padding: 14px 20px 14px 0;
+  border-radius: 4px;
+  background-color: var(--color-btn-default);
+  transition: background-color .3s ease-in-out;
+  // gap: 20px;
+  &:hover {
+    background-color: var(--color-btn-hovered);
+  }
+  & svg path {
+    fill: var(--color-inactive);
+  }
+}
+
+.button_payment {
+  padding-left: 25px;
+}

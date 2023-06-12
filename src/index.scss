@@ -1,0 +1,92 @@
+:root {
+  --bg-color-aside: #091336;
+  --bg-color-header: #FFFFFF;
+  --bg-color-main: #E5E5E5;
+  --color-input:#EAF0FA;
+  --color-btn-default: #005FF8;
+  --color-btn-hovered: #0024CB;
+  --color-progress-bar: #DEE6F5;
+  --color-yellow: #FFD500;
+  --color-green: #28A879;
+  --color-red: #EA1A4F;
+  --color-blue: #002CFB;
+  --color-light-blue:#005FF8;
+  --color-text-light-gray: #899CB1;
+  --text-default-color: #122945;
+  --text-secondary-color:#5E7793;
+  --color-link-active: rgba(216, 228, 251, 0.32);
+  --color-inactive: #ffffff99;
+}
+
+body {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+table {
+  border-spacing: 0;
+}
+
+.icon-default {
+  cursor: pointer;
+  & path {
+    transition: fill .3s ease-in-out;
+  }
+
+  &:hover {
+    & path {
+      fill: var(--color-btn-hovered);
+    }
+  }
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: local('SFProDisplay'),
+    url('./utils/fonts/SFProDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: local('SFProDisplay'),
+    url('./utils/fonts/SFProDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SFProDisplay';
+  src: local('SFProDisplay'),
+    url('./utils/fonts/SF-Pro-Display-Semibold.woff') format('woff');
+  font-weight: 600;
+}

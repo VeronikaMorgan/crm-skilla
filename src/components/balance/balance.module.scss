@@ -1,0 +1,33 @@
+.balance {
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 12px;
+  background-color: white;
+  border-radius: 48px;
+  color: var(--color-text-light-gray);
+  font-size: 14px;
+
+  .balance__value {
+    color: var(--text-default-color);
+    font-weight: 600;
+  }
+
+  &__add {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:hover path {
+      fill: var(--color-btn-hovered);
+    }
+  }
+
+  &:hover {
+    .balance__value {
+      color: var(--color-blue);
+    }
+  }
+}

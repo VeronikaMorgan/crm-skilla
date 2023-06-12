@@ -1,0 +1,55 @@
+.filter {
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-secondary-color);
+  width: fit-content;
+  min-height: 30px;
+  position: relative;
+  z-index: 2;
+
+  &:hover {
+    & .filter__value {
+      color: var(--color-btn-hovered);
+      & svg path {
+        fill: var(--color-btn-hovered);
+      }
+    }
+    & .filter__options {
+      display: flex
+    }
+  }
+  &__value {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    transition: color .3s ease-in-out;
+    // to make hover work
+    padding-bottom: 40px;
+  }
+  &__options {
+    position: absolute;
+    display: none;
+    z-index: 4;
+    right: 0;
+    flex-direction: column;
+    top: 38px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: -1px 9px 20px -3px rgba(173, 191, 223, 0.2);
+  }
+  &__option {
+    white-space: nowrap;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 10px 20px;
+    color: var(--color-text-light-gray);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      color: var(--text-default-color);
+      background-color: #002efb21;
+    }
+  }
+}

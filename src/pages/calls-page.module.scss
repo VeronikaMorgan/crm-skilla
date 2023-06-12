@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.utils {
+  display: flex;
+  gap: 48px;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+.filters {
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-height: 30px;
+}

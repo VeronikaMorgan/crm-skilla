@@ -1,0 +1,36 @@
+.header {
+  grid-area: head;
+  color: var(--color-text-light-gray);
+  font-size: 14px;
+  padding: 0 calc(6.25vw - 14px) 0 6.25vw;
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 86px;
+     @media screen and (max-width: 1600px) {
+    gap: 32px
+  }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  
+}
+.progress {
+  display: grid;
+  grid-template-columns: repeat(3, 164px);
+  gap: 56px;
+  max-width: fit-content;
+  @media screen and (max-width: 1600px) {
+    gap: 32px
+  }
+}
+

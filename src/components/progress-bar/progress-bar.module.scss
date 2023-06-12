@@ -1,0 +1,17 @@
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 14px;
+  color: var(--text-default-color);
+  &__bar {
+    height: 6px;
+    background-color: var(--color-progress-bar);
+    border-radius: 12px;
+    max-width: 156px;
+    overflow: hidden;
+    &_value {
+      height: 100%;
+    }
+  }
+}
