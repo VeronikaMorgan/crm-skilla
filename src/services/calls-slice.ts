@@ -1,4 +1,4 @@
-import { baseRequest, baseOptions, baseUrl } from "../utils/api";
+import { baseOptions, baseUrl } from "../utils/api";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 
