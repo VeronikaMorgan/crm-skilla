@@ -1,5 +1,5 @@
 # CRM React project
-
+![2023-06-12_18-51-57](https://github.com/VeronikaMorgan/crm-skilla/assets/113067367/078e2c35-942d-41ed-9931-84f2d042a4a9)
 ## Available Scripts
 
 In the project directory, you can run:
