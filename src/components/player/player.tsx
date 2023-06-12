@@ -71,6 +71,7 @@ const Player: FC<IPlayerProps> = ({ recordId, partnershipId }) => {
           background: `linear-gradient(90deg, #002CFB ${currentProgress}%, #ADBFDF ${currentProgress}%)`
         }}
         onClick={handleChangeOnClick}
+        onChange={(e) => e.preventDefault()}
       />
       <div className={styles.player__btns}>
         <a href={audio} target='_blank'>

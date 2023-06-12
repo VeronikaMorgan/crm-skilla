@@ -25,6 +25,9 @@
     background-color: #fff;
     border-radius: 50%;
   }
+  &__time {
+    min-width: 40px
+  }
 
   &__progress {
     cursor: pointer;
