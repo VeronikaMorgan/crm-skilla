@@ -17,7 +17,7 @@ import Player from "../player/player";
 
 const CallsTable: FC = () => {
   const calls = useAppSelector(store => store.calls.calls)
-  const { filters, areFiltersSet } = useAppSelector(store => store.filters)
+  const { areFiltersSet, filters } = useAppSelector(store => store.filters)
   const [filteredCalls, setFilteredCalls] = useState<any>()
 
   const filterDate = (callDate: Date): boolean => {
@@ -65,7 +65,7 @@ const CallsTable: FC = () => {
     })
     if (!filteredCalls) return
     setFilteredCalls(filteredCalls)
-  }, [filters, areFiltersSet])
+  }, [filters, areFiltersSet, calls])
 
   return (
     <table className={styles.table}>

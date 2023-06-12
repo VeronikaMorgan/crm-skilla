@@ -64,13 +64,16 @@
     box-sizing: border-box;
     padding: 0 40px;
     display: grid;
-    grid-template-columns: 54px 89px 128px minmax(250px, 326px) 214px minmax(170px, 175px) 1fr;
+    grid-template-columns: 54px 89px 128px minmax(250px, 326px) 214px minmax(130px, 175px) 1fr;
     min-height: 64px;
+    text-overflow: wrap;
     align-items: center;
     border-top: 1px solid var(--color-input);
     cursor: pointer;
     position: relative;
-
+    @media screen and (max-width: 1600px) {
+      grid-template-columns: 54px 69px 128px minmax(200px, 220px) 180px 130px 1fr;
+    }
     & td:last-of-type {
       justify-self: end;
     }

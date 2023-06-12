@@ -15,7 +15,7 @@ interface IPlayerProps {
 const Player: FC<IPlayerProps> = ({ recordId, partnershipId }) => {
   const [audio, setAudio] = useState<any>()
   const [isPlay, setIsplay] = useState<boolean>(false)
-  const [duration, setDuration] = useState<any>()
+
   const [currentTime, setCurrentTime] = useState<string>('0')
   const [currentProgress, setCurrentProgress] = useState<number>(0)
   const audioRef = useRef<HTMLAudioElement>(null)

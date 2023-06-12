@@ -6,7 +6,6 @@ export const getCalls = createAsyncThunk('calls/get', async () => {
   const data = await axios.post(baseUrl, null, baseOptions())
     .then(res => res.data.results)
     .catch(error => console.log(error))
-  console.log(data)
   return data
 })
 
